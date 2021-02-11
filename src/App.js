@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styled, { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./utils/Global";
+import { defaultTheme } from "./utils/themes";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <AppWrapper></AppWrapper>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 
-export default App;
+// note: change height to detect window height and width
+
+const AppWrapper = styled.div`
+  width: 30vw;
+  height: 80vh;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 180px;
+  position: fixed;
+  left: -50px;
+  content: "";
+  background-color: ${(props) => props.theme.backgroundGradient};
+  background-repeat: no-repeat;
+`;
