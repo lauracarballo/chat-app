@@ -8,7 +8,7 @@ export const defaultTheme = {
   textColorOnPlaceholder: neutral[100],
   backgroundColor: neutral[300],
   backgroundGradient: linearGradient({
-    colorStops: [`${violet[400]}5%`, `${magenta[100]}`],
+    colorStops: [`${violet[400]}`, `${magenta[100]}`],
     toDirection: "to top right",
     fallback: "#FFF",
   }),

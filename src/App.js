@@ -1,26 +1,29 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
+import { ThemeProvider } from "styled-components";
+import Background from "./components/Background";
+import Mobile from "./components/Mobile";
 import { GlobalStyle } from "./utils/Global";
 import { defaultTheme } from "./utils/themes";
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <AppWrapper></AppWrapper>
+      <Background />
+      <Wrapper>
+        <Mobile />
+      </Wrapper>
       <GlobalStyle />
     </ThemeProvider>
   );
 }
 
-// note: change height to detect window height and width
-
-const AppWrapper = styled.div`
-  width: 30vw;
-  height: 80vh;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 180px;
-  position: fixed;
-  left: -50px;
+export const Wrapper = styled.div`
+  position: relative;
+  top: 110px;
+  left: 330px;
+  width: 250px;
+  height: 500px;
   content: "";
-  background-color: ${(props) => props.theme.backgroundGradient};
-  background-repeat: no-repeat;
 `;
+
+// note: change height to detect window height and width
