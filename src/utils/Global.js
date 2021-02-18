@@ -25,4 +25,10 @@ main {
   width: 90%;
   margin: 0 auto;
 }
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 `;

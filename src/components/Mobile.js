@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { typeScale } from "../utils/typography";
+import MessageBox from "./MessageBox";
+import { MediaBox, Image } from "./MediaBox";
 
-export default function Mobile({ theme }) {
+export default function Mobile() {
   return (
     <Container>
       <Screen>
@@ -18,6 +20,19 @@ export default function Mobile({ theme }) {
             <span>.</span>
           </Column>
         </Header>
+        <MessageBox>That sounds great. I'd be happy with that.</MessageBox>
+        <MessageBox>
+          Could you send over some pictures of your dog, please?
+        </MessageBox>
+        <MediaBox>
+          <Image src="/images/dog-image-1.jpg" alt="dog" />
+          <Image src="/images/dog-image-2.jpg" alt="dog" />
+          <Image src="/images/dog-image-3.jpg" alt="dog" />
+        </MediaBox>
+        <MessageBox>
+          She looks so happy! The time we discussed works. How long shall I take
+          her out for?
+        </MessageBox>
       </Screen>
     </Container>
   );
