@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { typeScale } from "../utils/typography";
 import MessageBox from "./MessageBox";
 import { MediaBox, Image } from "./MediaBox";
+import PriceBox from "./PriceBox";
+import SendBox from "./SendBox";
 
 export default function Mobile() {
   return (
@@ -29,18 +31,25 @@ export default function Mobile() {
           <Image src="/images/dog-image-2.jpg" alt="dog" />
           <Image src="/images/dog-image-3.jpg" alt="dog" />
         </MediaBox>
+        <MessageBox onRight>
+          Here are a few pictures. She's a happy girl!
+        </MessageBox>
+        <MessageBox onRight>Can you make it?</MessageBox>
         <MessageBox>
           She looks so happy! The time we discussed works. How long shall I take
           her out for?
         </MessageBox>
+        <PriceBox text="30 mins walk" price="$29" />
+        <PriceBox text="1 hour walk" price="$49" />
+        <SendBox />
       </Screen>
     </Container>
   );
 }
 
 export const Container = styled.div`
-  width: 220px;
-  height: 450px;
+  width: 230px;
+  height: 470px;
   content: "";
   position: absolute;
   background-color: #fff;
@@ -51,8 +60,8 @@ export const Container = styled.div`
 
 export const Screen = styled.div`
   border-radius: 20px;
-  width: 200px;
-  height: 430px;
+  width: 210px;
+  height: 450px;
   content: "";
   background-color: ${(props) => props.theme.backgroundColor};
 `;
@@ -62,7 +71,7 @@ export const Header = styled.div`
   flex-direction: row;
   justify-content: space-between;
   background-color: purple;
-  padding: 20px 15px;
+  padding: 15px 15px;
   border-radius: 20px 20px 10px 10px;
   ${(props) => props.theme.backgroundGradient}
 `;

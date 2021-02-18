@@ -19,7 +19,7 @@ export default function App() {
 
 export const Wrapper = styled.div`
   position: relative;
-  top: 110px;
+  top: 100px;
   left: 330px;
   width: 250px;
   height: 500px;

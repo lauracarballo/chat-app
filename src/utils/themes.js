@@ -12,5 +12,10 @@ export const defaultTheme = {
     toDirection: "to top right",
     fallback: "#FFF",
   }),
+  backgroundGradientInvert: linearGradient({
+    colorStops: [`${violet[400]}`, `${magenta[100]}`],
+    toDirection: "to left",
+    fallback: "#FFF",
+  }),
   primaryFont: primaryFont,
 };

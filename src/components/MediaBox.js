@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const MediaBox = styled.div`
-  width: 60%;
-  margin-left: auto;
-  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 60%;
+  width: fit-content;
+  height: auto;
+  margin-left: auto;
+  margin-right: 10px;
 `;
 
 export const Image = styled.img`
