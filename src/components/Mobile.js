@@ -9,6 +9,7 @@ export default function Mobile() {
   return (
     <Container>
       <Screen>
+        {/* <AudioBox></AudioBox> */}
         <Header>
           <Row>
             <span>&#60;</span>
@@ -49,9 +50,8 @@ export default function Mobile() {
 
 export const Container = styled.div`
   width: 230px;
-  height: 470px;
+  height: 495px;
   content: "";
-  position: absolute;
   background-color: #fff;
   border-radius: 20px;
   padding: 10px;
@@ -61,7 +61,7 @@ export const Container = styled.div`
 export const Screen = styled.div`
   border-radius: 20px;
   width: 210px;
-  height: 450px;
+  height: 475px;
   content: "";
   background-color: ${(props) => props.theme.backgroundColor};
 `;
@@ -71,10 +71,19 @@ export const Header = styled.div`
   flex-direction: row;
   justify-content: space-between;
   background-color: purple;
-  padding: 15px 15px;
+  padding: 28px 15px 10px 15px;
   border-radius: 20px 20px 10px 10px;
   ${(props) => props.theme.backgroundGradient}
 `;
+
+// export const AudioBox = styled.div`
+//   position: absolute;
+//   width: 120px;
+//   height: 16px;
+//   border-radius: 0 0 10px 10px;
+//   right: 45px;
+//   background-color: #fff;
+// `;
 
 export const Column = styled.div`
   display: flex;

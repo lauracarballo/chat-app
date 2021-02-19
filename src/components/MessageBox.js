@@ -14,7 +14,8 @@ export const Container = styled.div`
   max-width: 60%;
   width: fit-content;
   height: auto;
-  border-radius: 7px 7px 7px 4px;
+  border-radius: ${(props) =>
+    props.onRight ? "7px 7px 4px 7px" : "7px 7px 7px 4px"};
   background-color: ${(props) =>
     props.onRight ? "#fff" : "hsl(270deg 61% 92%)"};
   margin: 10px;
