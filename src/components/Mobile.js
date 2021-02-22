@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { typeScale } from "../utils/typography";
+import { violet } from "../utils/colors";
 import MessageBox from "./MessageBox";
 import { MediaBox, Image } from "./MediaBox";
 import PriceBox from "./PriceBox";
@@ -9,10 +10,12 @@ export default function Mobile() {
   return (
     <Container>
       <Screen>
-        {/* <AudioBox></AudioBox> */}
         <Header>
+          <AudioBox></AudioBox>
           <Row>
-            <span>&#60;</span>
+            <Icon>
+              <i className="fas fa-chevron-left"></i>
+            </Icon>
             <Avatar src="/images/avatar.jpg" alt="profile" />
             <Column>
               <Name>Samuel Green</Name>
@@ -20,7 +23,9 @@ export default function Mobile() {
             </Column>
           </Row>
           <Column>
-            <span>.</span>
+            <Icon>
+              <i className="fas fa-ellipsis-v"></i>
+            </Icon>
           </Column>
         </Header>
         <MessageBox>That sounds great. I'd be happy with that.</MessageBox>
@@ -49,19 +54,19 @@ export default function Mobile() {
 }
 
 export const Container = styled.div`
-  width: 230px;
-  height: 495px;
+  width: 220px;
+  height: 445px;
   content: "";
   background-color: #fff;
   border-radius: 20px;
-  padding: 10px;
+  padding: 8px;
   box-shadow: 15px 15px 65px hsl(206deg 6% 79%);
 `;
 
 export const Screen = styled.div`
   border-radius: 20px;
-  width: 210px;
-  height: 475px;
+  width: 204px;
+  height: 428px;
   content: "";
   background-color: ${(props) => props.theme.backgroundColor};
 `;
@@ -70,20 +75,23 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  align-items: center;
   background-color: purple;
-  padding: 28px 15px 10px 15px;
+  padding: 18px 15px 6px 15px;
   border-radius: 20px 20px 10px 10px;
   ${(props) => props.theme.backgroundGradient}
 `;
 
-// export const AudioBox = styled.div`
-//   position: absolute;
-//   width: 120px;
-//   height: 16px;
-//   border-radius: 0 0 10px 10px;
-//   right: 45px;
-//   background-color: #fff;
-// `;
+export const AudioBox = styled.div`
+  position: absolute;
+  width: 117px;
+  height: 16px;
+  border-radius: 0 0 10px 10px;
+  right: 43px;
+  top: -1px;
+  background-color: #fff;
+`;
 
 export const Column = styled.div`
   display: flex;
@@ -96,22 +104,28 @@ export const Row = styled.div`
   align-items: center;
 `;
 
+export const Icon = styled.div`
+  color: #fff;
+  font-size: 10px;
+  margin-right: 3px;
+`;
+
 export const Avatar = styled.img`
-  width: 20px;
-  height: 20px;
-  margin: 5px;
+  width: 23px;
+  height: 23px;
+  margin: 6px;
   border: 1px solid #fff;
   border-radius: 100px;
 `;
 
 export const Name = styled.span`
-  font-size: ${typeScale.helperText};
+  font-size: ${typeScale.copyrightText};
   font-weight: 500;
   color: #fff;
 `;
 
 export const Status = styled.span`
-  font-size: ${typeScale.copyrightText};
+  font-size: ${typeScale.messageText};
   font-weight: 400;
-  color: ${(props) => props.theme.textColor};
+  color: ${violet[500]};
 `;

@@ -19,11 +19,11 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 70%;
-  height: auto;
+  height: 30px;
   border-radius: 7px 7px 7px 4px;
   ${(props) => props.theme.backgroundGradientInvert}
-  margin: 10px;
-  padding: 10px 10px;
+  margin: 6px;
+  padding: 4px 10px;
 `;
 
 export const Wrapper = styled.div`

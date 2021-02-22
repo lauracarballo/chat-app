@@ -18,10 +18,10 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 35px;
+  height: 32px;
   border-radius: 30px;
   background-color: #fff;
-  margin: 15px 10px;
+  margin: 10px 8px;
   padding-right: 5px;
   padding-left: 10px;
 `;

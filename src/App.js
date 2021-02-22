@@ -33,19 +33,33 @@ export const Container = styled.main`
   display: grid;
   place-items: center;
   width: 90%;
-  height: 660px;
+  height: 670px;
+
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 250px;
+  margin-left: 270px;
+  @media only screen and (max-width: 767px) {
+    margin: 50px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 170px 120px;
+  margin: 120px 144px 170px 120px;
+  @media only screen and (max-width: 767px) {
+    margin: 50px 0px;
+  }
 `;
 
 // export const Wrapper = styled.div`

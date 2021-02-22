@@ -3,7 +3,7 @@ import { primaryFont } from "./typography";
 import { normalize } from "polished";
 import { defaultTheme } from "./themes";
 import { typeScale } from "../utils/typography";
-import { neutral } from "../utils/colors";
+import { neutral, violet } from "../utils/colors";
 
 export const GlobalStyle = createGlobalStyle`
 ${normalize()}
@@ -35,9 +35,15 @@ p {
   margin-block-start: 0em;
   margin-block-end: 0em;
   font-weight: 400;
-  font-size: ${typeScale.paragraph};
+  font-size: ${typeScale.helperText};
   color: ${neutral[100]};
-  line-height: 1.5;
+  line-height: 1.75;
+}
+
+h1 {
+  color: ${violet[100]};
+  font-weight: 500;
+  font-size: ${typeScale.header1};
 }
 
 `;

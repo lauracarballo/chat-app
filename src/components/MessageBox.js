@@ -18,9 +18,9 @@ export const Container = styled.div`
     props.onRight ? "7px 7px 4px 7px" : "7px 7px 7px 4px"};
   background-color: ${(props) =>
     props.onRight ? "#fff" : "hsl(270deg 61% 92%)"};
-  margin: 10px;
+  margin: 8px;
   margin-left: ${(props) => (props.onRight ? "auto" : "none")};
-  padding: 5px 10px;
+  padding: 4px 10px;
 `;
 
 export const Text = styled.p`
